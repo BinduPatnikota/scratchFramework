@@ -7,13 +7,53 @@
   <version>1.0-SNAPSHOT</version>
   <name>scratchFramework</name>
   <url>http://maven.apache.org</url>
+  <build>
+  <resources>
+   <resource>
+        <directory>src/main/java/res</directory>
+        <filtering>true</filtering>
+      </resource>
+  </resources>
+  <plugins>
+  <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+   </plugin>
+</plugins>
+ </build>
   <dependencies>
+  <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
+  
    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.11.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.11.2</version>
+</dependency>
+
    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -39,6 +79,18 @@
     <artifactId>log4j-api</artifactId>
     <version>2.11.2</version>
 </dependency>
-   
-  </dependencies>
+<!-- pom.xml -->
+<dependency>
+<groupId>com.relevantcodes</groupId>
+<artifactId>extentreports</artifactId>
+<version>2.41.2</version>
+</dependency>
+<dependency>
+<groupId>com.aventstack</groupId>
+<artifactId>extentreports</artifactId>
+<version>3.1.5</version>
+</dependency>
+
+
+ </dependencies>
 </project>
