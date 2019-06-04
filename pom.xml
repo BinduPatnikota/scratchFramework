@@ -8,6 +8,8 @@
   <name>scratchFramework</name>
   <url>http://maven.apache.org</url>
   <build>
+	  
+	  
   <resources>
    <resource>
         <directory>src/main/java/res</directory>
